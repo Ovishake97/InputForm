@@ -38,12 +38,12 @@ phone.addEventListener('input',function()
             else 
             phoneError.textContent="phone number is incorrect";
         });
-//UC4-Validating for password-1
+//UC5-Validating for password
 const pwd=document.querySelector('#pwd');
 const pwdError=document.querySelector('.pwd-error');
 pwd.addEventListener('input',function()
         {
-            let passWordRegex=RegExp('^[a-zA-Z0-9]{8,}');
+            let passWordRegex=RegExp('^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$');
             if(passWordRegex.test(pwd.value))
             pwdError.textContent="";
             else 
