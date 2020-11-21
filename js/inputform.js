@@ -19,7 +19,7 @@ text.addEventListener('input',function()
 //UC2-Validating for email
 const email=document.querySelector('#email');
 const emailError=document.querySelector('.email-error');
-text.addEventListener('input',function()
+email.addEventListener('input',function()
         {
             let emailRegex=RegExp('^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]{2})*$');
             if(emailRegex.test(email.value))
@@ -30,7 +30,7 @@ text.addEventListener('input',function()
 //UC3-Validating for phone number
 const phone=document.querySelector('#tel');
 const phoneError=document.querySelector('.tel-error');
-text.addEventListener('input',function()
+phone.addEventListener('input',function()
         {
             let phoneRegex=RegExp('^[0-9]{2}[][0-9]{10}$');
             if(phoneRegex.test(phone.value))
@@ -38,3 +38,15 @@ text.addEventListener('input',function()
             else 
             phoneError.textContent="phone number is incorrect";
         });
+//UC4-Validating for password-1
+const pwd=document.querySelector('#pwd');
+const pwdError=document.querySelector('.pwd-error');
+pwd.addEventListener('input',function()
+        {
+            let passWordRegex=RegExp('^[a-zA-Z0-9]{8,}');
+            if(passWordRegex.test(pwd.value))
+            pwdError.textContent="";
+            else 
+            pwdError.textContent="phone number is incorrect";
+        });
+
