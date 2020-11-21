@@ -14,7 +14,7 @@ text.addEventListener('input',function()
             if(nameRegex.test(text.value))
             textError.textContent="";
             else 
-            textError.textContent="Name is InCorrect";
+            textError.textContent="Name is incorrect";
         });
 //UC2-Validating for email
 const email=document.querySelector('#email');
@@ -25,5 +25,16 @@ text.addEventListener('input',function()
             if(emailRegex.test(email.value))
             emailError.textContent="";
             else 
-            emailError.textContent="Emailid is InCorrect";
+            emailError.textContent="Emailid is incorrect";
+        });
+//UC3-Validating for phone number
+const phone=document.querySelector('#tel');
+const phoneError=document.querySelector('.tel-error');
+text.addEventListener('input',function()
+        {
+            let phoneRegex=RegExp('^[0-9]{2}[][0-9]{10}$');
+            if(phoneRegex.test(phone.value))
+            phoneError.textContent="";
+            else 
+            phoneError.textContent="phone number is incorrect";
         });
